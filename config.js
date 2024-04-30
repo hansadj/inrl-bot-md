@@ -3,7 +3,7 @@ const { existsSync } = require('fs')
 const { Sequelize } = require('sequelize');
 if (existsSync('config.env')) require('dotenv').config({ path: './config.env' })
 process.env.NODE_OPTIONS = '--max_old_space_size=2560'//2.5
-const DB_URL =  process.env.DATABASE_URL || '';
+const DB_URL =  process.env.DATABASE_URL || 'mongodb+srv://DARKSHAN:1000@cluster0.t1wsjlv.mongodb.net/';
 module.exports = {
     SESSION_ID: process.env.SESSION_ID || 'inrl~08f24DzZb6b269b1f5fb4a6df80cc0daf8f1', //your ssid to run bot
     HEROKU: {
